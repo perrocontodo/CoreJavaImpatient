@@ -1,4 +1,4 @@
-/* 1. Change the calendar printing program so it starts the week on a Sunday.
+package corejavaimpatient;/* 1. Change the calendar printing program so it starts the week on a Sunday.
  * Also make it print a newline at the end (but only one).
  */
 

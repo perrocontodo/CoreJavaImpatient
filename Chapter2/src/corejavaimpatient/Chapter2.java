@@ -1,3 +1,5 @@
+package corejavaimpatient;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -19,12 +21,12 @@ public class Chapter2 {
         } else {
             switch (exercise) {
                 case 1:
-                    System.out.print("Type month and year, as \"3 2018\": ");
+                    System.out.print("Type month and year, for example \"3 2018\": ");
                     Scanner arguments = new Scanner(System.in);
                     Cal.printCalendar(arguments.nextLine().split(" "));
                     break;
                 case 2:
-                    exercise2();
+                    AccessorAndMutator.printMessage();
                     break;
                 case 3:
                     exercise3();
