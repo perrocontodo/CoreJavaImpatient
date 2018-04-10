@@ -1,5 +1,7 @@
 package corejavaimpatient;
 
+import org.omg.CORBA.IntHolder;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -29,10 +31,37 @@ public class Chapter2 {
                     AccessorAndMutator.printMessage();
                     break;
                 case 3:
-                    exercise3();
+                    MutatorAccessorReturnVoid mutatorAccessorReturnVoid = new MutatorAccessorReturnVoid();
+                    Integer integer = mutatorAccessorReturnVoid.returnRandomNumber();
+                    System.out.printf("Exercise 3, example 1: mutator that sets an instance variable to a random number" +
+                            " and returns it: %d\n", integer);
+                    mutatorAccessorReturnVoid.printMessage();
+                    System.out.println("If we keep the original meanings from the book (mutator: method that changes the " +
+                            "object on which it was invoked.\nAccessor: if it leaves the object unchanged) then these " +
+                            "methods follow the definitions, although they are not very practical.");
                     break;
                 case 4:
-                    exercise4();
+                    int int1 = 1;
+                    int int2 = 5;
+                    SwappingVariables.swapTwoInts(int1, int2);
+                    System.out.printf("And after coming back from the method int1 equals %d, and int2 equals %d. So, no change.\n",
+                            int1, int2);
+                    System.out.println("The reason being that in Java parameters are passed as values. The parameters are copied\n" +
+                            "to the parameter variables, where the change happens. After the method is ended, the parameter\n" +
+                            "variables go out of scope.\n");
+
+                    IntHolder intHolder1 = new IntHolder(10);
+                    IntHolder intHolder2 = new IntHolder(50);
+                    SwappingVariables.swapTwoIntHolders(intHolder1, intHolder2);
+                    System.out.printf("And after coming back from the method intHolder1 equals %d, and intHolder2 equals %d.\n\n",
+                            intHolder1.value, intHolder2.value);
+
+                    Integer integer1 = 100;
+                    Integer integer2 = 500;
+                    SwappingVariables.swapTwoIntegers(integer1, integer2);
+                    System.out.printf("And after coming back from the method integer1 equals %d, and integer2 equals %d.\n",
+                            integer1, integer2);
+
                     break;
                 case 5:
                     exercise5();
