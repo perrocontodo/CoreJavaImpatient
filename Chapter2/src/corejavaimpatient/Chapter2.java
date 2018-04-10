@@ -64,43 +64,46 @@ public class Chapter2 {
 
                     break;
                 case 5:
-                    exercise5();
+                    Point p = new Point(3, 4).translate(1, 3).scale(0.5);
+                    System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", p.getX(), p.getY());
+                    Point p2 = new Point(8, 39).translate(3, -1).scale(2.5);
+                    System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", p2.getX(), p2.getY());
                     break;
                 case 6:
-                    exercise6();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 7:
-                    exercise7();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 8:
-                    exercise8();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 9:
-                    exercise9();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 10:
-                    exercise10();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 11:
-                    exercise11();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 12:
-                    exercise12();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 13:
-                    exercise13();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 14:
-                    exercise14();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 15:
-                    exercise15();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 16:
-                    exercise16();
+                    System.out.println("Nothing here yet ...");
                     break;
                 case 17:
-                    exercise17();
+                    System.out.println("Nothing here yet ...");
                     break;
                 default:
                     printUsage();
@@ -108,54 +111,6 @@ public class Chapter2 {
 
             }
         }
-    }
-
-    private static void exercise2() {
-    }
-
-    private static void exercise3() {
-    }
-
-    private static void exercise4() {
-    }
-
-    private static void exercise5() {
-    }
-
-    private static void exercise6() {
-    }
-
-    private static void exercise7() {
-    }
-
-    private static void exercise8() {
-    }
-
-    private static void exercise9() {
-    }
-
-    private static void exercise10() {
-    }
-
-    private static void exercise11() {
-    }
-
-    private static void exercise12() {
-    }
-
-    private static void exercise13() {
-    }
-
-    private static void exercise14() {
-    }
-
-    private static void exercise15() {
-    }
-
-    private static void exercise16() {
-    }
-
-    private static void exercise17() {
     }
 
     private static void printUsage() {
