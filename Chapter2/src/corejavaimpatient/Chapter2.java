@@ -70,7 +70,14 @@ public class Chapter2 {
                     System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", p2.getX(), p2.getY());
                     break;
                 case 6:
-                    System.out.println("Nothing here yet ...");
+                    PointMutator pm = new PointMutator(3, 4);
+                    pm.translate(1, 3);
+                    pm.scale(0.5);
+                    System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", pm.getX(), pm.getY());
+                    PointMutator pm2 = new PointMutator(8, 39);
+                    pm2.translate(3, -1);
+                    pm2.scale(2.5);
+                    System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", pm2.getX(), pm2.getY());
                     break;
                 case 7:
                     System.out.println("Nothing here yet ...");
