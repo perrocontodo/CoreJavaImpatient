@@ -11,38 +11,55 @@
 
 package corejavaimpatient;
 
+/** A <code>Point</code> object represents point, with x and y coordinates.
+  * @author David Catanho
+  * @version 1.0
+  * @see <a href="http://horstmann.com/javaimpatient/">"Core Java for the Impatient"</a>
+  */
 class Point {
     private Double x;
     private Double y;
 
-    Point() {
+    private Point() {
         this.x = 0.0;
         this.y = 0.0;
     }
 
     Point(Integer x, Integer y) {
-        this.x = x.doubleValue();
-        this.y = y.doubleValue();
+        Point newPoint = new Point();
+        this.x = newPoint.getX() + x;
+        this.y = newPoint.getY() + y;
     }
 
-    Point(Double x, Double y) {
+    private Point(Double x, Double y) {
         this.x = x;
         this.y = y;
     }
 
 
-    public Double getX() {
+    Double getX() {
         return x;
     }
 
-    public Double getY() {
+    Double getY() {
         return y;
     }
 
+    /**
+     * Moves the point to a new x and y coordinates.
+     * @param x move coordinate x this amount
+     * @param y move coordinate y this amount
+     * @return new Point with x and y moved to the new coordinates
+     */
     Point translate(Integer x, Integer y) {
         return new Point(this.x + x, this.y + y);
     }
 
+    /**
+     * "Grows" the point by a specified factor
+     * @param factor how much to increase the coordinates
+     * @return new Point with x and y increased by the factor
+     */
     Point scale(Double factor) {
         return new Point(this.x * factor, this.y * factor);
     }

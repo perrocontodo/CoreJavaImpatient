@@ -80,10 +80,11 @@ public class Chapter2 {
                     System.out.printf("Point coordinates after transformation: (%.1f, %.1f)\n", pm2.getX(), pm2.getY());
                     break;
                 case 7:
-                    System.out.println("Nothing here yet ...");
+                    System.out.println("See javadoc documentation in source code");
                     break;
                 case 8:
-                    System.out.println("Nothing here yet ...");
+                    System.out.println("Intellij offers submenus to create classes, constructors, getters and setters. \n" +
+                            "Easily accessible context menu with Alt+Insert");
                     break;
                 case 9:
                     System.out.println("Nothing here yet ...");
