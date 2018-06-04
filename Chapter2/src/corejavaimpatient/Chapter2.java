@@ -2,6 +2,8 @@ package corejavaimpatient;
 
 import org.omg.CORBA.IntHolder;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -87,10 +89,26 @@ public class Chapter2 {
                             "Easily accessible context menu with Alt+Insert");
                     break;
                 case 9:
-                    System.out.println("Nothing here yet ...");
+                    Car car = new Car(15);
+                    car.Drive(500);
+                    car.AddGas(10);
+                    car.GetStats();
+                    System.out.println("I think the best way to implement a class like this is with a mutable class." +
+                            "In this case, there will not be multiple processing in this class. Besides, a car can only" +
+                            "be driven once, right?");
                     break;
                 case 10:
-                    System.out.println("Nothing here yet ...");
+                    Integer[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+                    System.out.printf("Random number from list: %d\n", RandomNumbers.randomElement(array));
+                    ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(array));
+                    System.out.printf("Random number from ArrayList: %d\n", RandomNumbers.randomElement(arrayList));
+                    Integer[] emptyArray = {};
+                    System.out.printf("Random number from emptyArray: %d\n", RandomNumbers.randomElement(emptyArray));
+                    ArrayList<Integer> emptyArrayList = new ArrayList<>();
+                    System.out.printf("Random number from emptyArrayList: %d\n", RandomNumbers.randomElement(emptyArrayList));
+                    System.out.println("We can't have it an instance method of int[] because primitive types are not classes in Java\n" +
+                            "(and int[] is a primitive type). In the case of ArrayList, this is a class in the standard library that\n" +
+                            "we can't modify.");
                     break;
                 case 11:
                     System.out.println("Nothing here yet ...");
